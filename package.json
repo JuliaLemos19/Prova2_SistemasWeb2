@@ -1,0 +1,17 @@
+//Julia Lemos
+{
+  "name": "desktop-app",
+  "version": "1.0.0",
+  "description": "Aplicação Desktop para Gestão de Usuários",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."  
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^31.0.0" 
+  }
+}

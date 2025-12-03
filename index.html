@@ -1,0 +1,39 @@
+//Julia Lemos
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestão de Usuários</title>
+    <style>body { font-family: sans-serif; margin: 20px; } table { width: 100%; border-collapse: collapse; margin-top: 20px; } th, td { border: 1px solid #ccc; padding: 8px; text-align: left; } input, button { padding: 8px; margin: 5px; }</style>
+</head>
+<body>
+    <h1>Aplicação Desktop: Gestão de Usuários</h1>
+    <section id="login-section">
+        <h2>Login</h2>
+        <input type="text" id="login-nome" placeholder="Nome de Usuário">
+        <input type="password" id="login-senha" placeholder="Senha">
+        <button onclick="handleLogin()">Entrar</button>
+        <p id="login-message" style="color: red;"></p>
+    </section>
+    <section id="user-management" style="display: none;">
+        <h2>Lista de Usuários</h2>
+        <button onclick="showCreateForm()">Novo Usuário</button>
+        <table id="user-table">
+            <thead><tr><th>ID</th><th>Nome</th><th>Status</th><th>Ações</th></tr></thead>
+            <tbody></tbody>
+        </table>
+        <hr>
+        <div id="user-form-container" style="display: none;">
+            <h3><span id="form-title">Cadastrar</span> Usuário</h3>
+            <input type="hidden" id="user-id">
+            <input type="text" id="user-nome" placeholder="Nome">
+            <input type="password" id="user-senha" placeholder="Senha (deixe vazio para não alterar)">
+            <select id="user-status" style="display: none;"><option value="true">Ativo</option><option value="false">Inativo</option></select>
+            <button onclick="saveUser()">Salvar</button>
+            <button onclick="hideForm()">Cancelar</button>
+        </div>
+        <button id="logout-btn" onclick="logout()">Sair</button>
+    </section>
+    <script src="app.js"></script>
+</body>
+</html>
